@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { AddCategory } from "./components/AddCategory";
+import { GifGrid } from "./components/GifGrid";
 export const GifApp = () => {
   const [categories, setCategories] = useState([
     "Naruto shippuden",
@@ -15,11 +16,10 @@ export const GifApp = () => {
     <>
       <h1>GifApp</h1>
       <AddCategory onNewCategory={onAddCategory} />
-      <ol>
-        {categories.map((category) => {
-          return <ul key={category}>{category}</ul>;
-        })}
-      </ol>
+
+      {categories.map((category) => (
+        <GifGrid key={category} category={category} />
+      ))}
     </>
   );
 };
