@@ -6,4 +6,5 @@ Aplicación creada con React - Javascript para buscar GIFs animados
 ### Setup
 
 1. `yarn install`
-2. `yarn dev`
+2. `cp .env.local.example .env.local`
+3. `yarn dev`
